@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension point="com.change_vision.astah.ui.actionSets">
+      <actionSet
+             label="%action_set_label"
+             visible="true"
+             id="com.proyectoastah.xmiexport.actionSet">
+         <menu
+               id="xmiexporter"
+               label="%menu_group"
+               path="tool/xmi">
+         </menu>
+         <action
+			   label="%export_xmi_menu_label"
+               class="com.proyectoastah.xmiexport.actions.ExportXmiAction"
+               tooltip="%export_xmi_menu_tooltip"
+               menubarPath="tool/xmiexporter/"
+               id="com.proyectoastah.xmiexport.actions.ExportXmiAction">
+         </action>
+      </actionSet>
+   </extension>
+</plugin>
