@@ -1,8 +1,0 @@
-/home/debian/work/proyecto-astah/plugin-export/src/main/java/com/proyectoastah/xmiexport/Activator.java
-/home/debian/work/proyecto-astah/plugin-export/src/main/java/com/proyectoastah/xmiexport/export/ExportMode.java
-/home/debian/work/proyecto-astah/plugin-export/src/main/java/com/proyectoastah/xmiexport/export/CustomXmiExporter.java
-/home/debian/work/proyecto-astah/plugin-export/src/main/java/com/proyectoastah/xmiexport/actions/ExportXmiAction.java
-/home/debian/work/proyecto-astah/plugin-export/src/main/java/com/proyectoastah/xmiexport/export/XmiExporter.java
-/home/debian/work/proyecto-astah/plugin-export/src/main/java/com/proyectoastah/xmiexport/export/NativeAstahXmiExporter.java
-/home/debian/work/proyecto-astah/plugin-export/src/main/java/com/proyectoastah/xmiexport/ui/FileSelection.java
-/home/debian/work/proyecto-astah/plugin-export/src/main/java/com/proyectoastah/xmiexport/export/XmiExportService.java
