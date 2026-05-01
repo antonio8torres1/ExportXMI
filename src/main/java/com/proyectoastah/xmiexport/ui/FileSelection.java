@@ -17,7 +17,7 @@ public final class FileSelection {
         JFileChooser chooser = new JFileChooser(lastDirectory);
         chooser.setDialogTitle("Exportar XMI");
         chooser.setFileFilter(new FileNameExtensionFilter("XMI (*.xmi)", "xmi"));
-        chooser.setSelectedFile(new File("model.xmi"));
+        chooser.setSelectedFile(new File("proyect.xmi"));
 
         if (chooser.showSaveDialog(parent) != JFileChooser.APPROVE_OPTION) {
             return null;

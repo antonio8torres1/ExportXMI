@@ -1,22 +1,22 @@
 Manifest-Version: 1.0
 Astah-Edition: pro,uml
 Astah-Version: 10.0
-Bnd-LastModified: 1777446575433
+Bnd-LastModified: 1777620056481
 Build-Jdk-Spec: 25
 Bundle-Activator: com.proyectoastah.xmiexport.Activator
 Bundle-Description: %bundle.description
 Bundle-ManifestVersion: 2
 Bundle-Name: %bundle.name
 Bundle-SymbolicName: com.proyectoastah.xmiexport; singleton:=true
-Bundle-Version: 0.1.0
+Bundle-Version: 0.1.1
 Created-By: Apache Maven Bundle Plugin 5.1.4
 Embed-Dependency: *;scope=compile|runtime;type=!pom
 Embed-Transitive: true
-Export-Package: com.proyectoastah.xmiexport;version="0.1.0";uses:="org.o
- sgi.framework",com.proyectoastah.xmiexport.actions;version="0.1.0";uses
+Export-Package: com.proyectoastah.xmiexport;version="0.1.1";uses:="org.o
+ sgi.framework",com.proyectoastah.xmiexport.actions;version="0.1.1";uses
  :="com.change_vision.jude.api.inf.ui",com.proyectoastah.xmiexport.expor
- t;version="0.1.0";uses:="com.change_vision.jude.api.inf.project",com.pr
- oyectoastah.xmiexport.ui;version="0.1.0"
+ t;version="0.1.1";uses:="com.change_vision.jude.api.inf.project",com.pr
+ oyectoastah.xmiexport.ui;version="0.1.1"
 Import-Package: com.change_vision.jude.api.inf;resolution:=optional,com.
  change_vision.jude.api.inf.model;resolution:=optional,com.change_vision
  .jude.api.inf.project;resolution:=optional,com.change_vision.jude.api.i

@@ -31,14 +31,22 @@ public class ExportXmiAction implements IPluginActionDelegate {
             }
 
             exportService.export(projectAccessor, outputFile, ExportMode.AUTO);
-            JOptionPane.showMessageDialog(window.getParent(), "XMI exportado correctamente:\n" + outputFile.getAbsolutePath(),
+            JOptionPane.showMessageDialog(window.getParent(), "Proyecto exportado a XMI correctamente:\n" + outputFile.getAbsolutePath(),
                     "XMI Exporter", JOptionPane.INFORMATION_MESSAGE);
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(window.getParent(), "Error al exportar XMI:\n" + e.getMessage(),
+            JOptionPane.showMessageDialog(window.getParent(), buildErrorMessage(e),
                     "XMI Exporter", JOptionPane.ERROR_MESSAGE);
             throw new UnExpectedException();
         }
 
         return null;
+    }
+
+    private String buildErrorMessage(Exception e) {
+        String message = e.getMessage();
+        if (message == null || message.trim().isEmpty()) {
+            message = "Verifica que el proyecto este abierto y que la ruta tenga permisos de escritura.";
+        }
+        return "No se pudo exportar el proyecto a XMI:\n" + message;
     }
 }

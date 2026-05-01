@@ -11,11 +11,30 @@ public class XmiExportService {
     public void export(ProjectAccessor projectAccessor, File outputFile, ExportMode mode) throws Exception {
         projectAccessor.getProject();
 
-        if (mode == ExportMode.CUSTOM) {
-            customExporter.export(projectAccessor, outputFile);
-            return;
+        switch (mode) {
+        case CUSTOM:
+            exportWith(customExporter, projectAccessor, outputFile);
+            break;
+        case AUTO:
+        case NATIVE:
+            exportWith(nativeExporter, projectAccessor, outputFile);
+            break;
+        default:
+            throw new IllegalArgumentException("Modo de exportacion no soportado: " + mode);
         }
+    }
 
-        nativeExporter.export(projectAccessor, outputFile);
+    private void exportWith(XmiExporter exporter, ProjectAccessor projectAccessor, File outputFile) throws Exception {
+        exporter.export(projectAccessor, outputFile);
+        validateOutputFile(outputFile);
+    }
+
+    private void validateOutputFile(File outputFile) {
+        if (!outputFile.isFile()) {
+            throw new IllegalStateException("Astah no genero el archivo XMI de salida.");
+        }
+        if (outputFile.length() == 0) {
+            throw new IllegalStateException("Astah genero un archivo XMI vacio.");
+        }
     }
 }
